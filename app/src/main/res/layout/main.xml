@@ -26,11 +26,13 @@
         android:layout_marginTop="15dp"
         android:layout_marginLeft="15dp"
         android:layout_marginRight="15dp">
+
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="150dp"
-            android:src="@drawable/spina"
-            android:scaleType="fitXY"/>
+            android:onClick="GoToBack"
+            android:scaleType="fitXY"
+            android:src="@drawable/spina" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -52,11 +54,13 @@
         android:layout_marginTop="15dp"
         android:layout_marginLeft="15dp"
         android:layout_marginRight="15dp">
+
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="150dp"
-            android:src="@drawable/biceps"
-            android:scaleType="fitXY"/>
+            android:onClick="GoToBiceps"
+            android:scaleType="fitXY"
+            android:src="@drawable/biceps" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -78,11 +82,13 @@
         android:layout_marginTop="15dp"
         android:layout_marginLeft="15dp"
         android:layout_marginRight="15dp">
+
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="150dp"
-            android:src="@drawable/triceps"
-            android:scaleType="fitXY"/>
+            android:onClick="GoToTriceps"
+            android:scaleType="fitXY"
+            android:src="@drawable/triceps" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -104,11 +110,13 @@
         android:layout_marginTop="15dp"
         android:layout_marginLeft="15dp"
         android:layout_marginRight="15dp">
+
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="150dp"
-            android:src="@drawable/ikr"
-            android:scaleType="fitXY"/>
+            android:onClick="GoToCalf"
+            android:scaleType="fitXY"
+            android:src="@drawable/ikr" />
 
         <TextView
             android:layout_width="wrap_content"

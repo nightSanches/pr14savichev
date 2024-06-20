@@ -1,5 +1,7 @@
 package com.example.pr14savichev;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.text.style.SuggestionRangeSpan;
 import android.view.View;
@@ -13,6 +15,7 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 import androidx.appcompat.app.AlertDialog;
+import android.widget.FrameLayout;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -31,8 +34,6 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
     }
     public void AlertDialog(String title, String message){
-        // Создает и отображает диалоговое окно с заданным заголовком и сообщением.
-        // Диалоговое окно не может быть отменено и содержит кнопку “OK”, которая закрывает диалог.
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder.setTitle(title)
                 .setMessage(message)
@@ -71,6 +72,7 @@ public class MainActivity extends AppCompatActivity {
 
         setContentView(R.layout.step_3);
 
+        Muscles = new CheckBox[4];
         Muscles[0] = findViewById(R.id.Back);
         Muscles[1] = findViewById(R.id.Biceps);
         Muscles[2] = findViewById(R.id.Triceps);
@@ -107,5 +109,47 @@ public class MainActivity extends AppCompatActivity {
             AlertDialog("Ошибка!", "Необходимо указать пол.");
             return;
         }
+        setContentView(R.layout.main);
+
+        if(!Muscles[0].isChecked()){
+            FrameLayout fl = findViewById(R.id.FrameBack);
+            fl.setVisibility(View.GONE);
+        }
+
+        if(!Muscles[1].isChecked()){
+            FrameLayout fl = findViewById(R.id.FrameBiceps);
+            fl.setVisibility(View.GONE);
+        }
+
+        if(!Muscles[2].isChecked()){
+            FrameLayout fl = findViewById(R.id.FrameTriceps);
+            fl.setVisibility(View.GONE);
+        }
+
+        if(!Muscles[3].isChecked()){
+            FrameLayout fl = findViewById(R.id.FrameCalf);
+            fl.setVisibility(View.GONE);
+        }
+    }
+
+    public void GoToBack(View view){
+        String youtubeUrl = "https://youtu.be/6rr4sfFVCNo?si=eK86IRjhKGKq01rD";
+        Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(youtubeUrl));
+        startActivity(browserIntent);
+    }
+    public void GoToTriceps(View view){
+        String youtubeUrl = "https://youtu.be/UhAt45tuirk?si=-xmXwnbNe57Rlv7c";
+        Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(youtubeUrl));
+        startActivity(browserIntent);
+    }
+    public void GoToBiceps(View view){
+        String youtubeUrl = "https://youtu.be/VwUYKfmXVTU?si=z-tlD5Y_nGLsW91r";
+        Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(youtubeUrl));
+        startActivity(browserIntent);
+    }
+    public void GoToCalf(View view){
+        String youtubeUrl = "https://youtu.be/keZS8eEoBAs?si=1c-uGSLgvSKRNLRo";
+        Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(youtubeUrl));
+        startActivity(browserIntent);
     }
 }

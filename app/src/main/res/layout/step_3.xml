@@ -64,7 +64,7 @@
         <CheckBox
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="икроножные мышцы"
+            android:text="Икроножные мышцы"
             android:textColor="@color/white"
             android:id="@+id/Calf"
             />

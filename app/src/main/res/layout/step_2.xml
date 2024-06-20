@@ -26,6 +26,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="15dp"
         android:gravity="center"
+        android:text="Как часто вы готовы заниматься спортом?"
         android:textColor="@color/white"
         android:textSize="14dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -67,14 +68,12 @@
     </RadioGroup>
 
     <androidx.appcompat.widget.AppCompatButton
-        android:onClick="GoToThree"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_marginLeft="30dp"
-        android:layout_marginRight="30dp"
         android:layout_marginTop="100dp"
+        android:layout_marginRight="30dp"
         android:background="@drawable/button"
-        android:textColor="#0097ff"
-        android:text="Продолжить"
-        />
+        android:onClick="GoToThree"
+        android:text="Продолжить" />
 </LinearLayout>
